@@ -26,8 +26,19 @@ const jogador = database.define("jogador_tb",
     }
 )
 
-jogador.belongsTo(cidade)
-jogador.belongsTo(personagem)
+jogador.belongsTo(cidade, { 
+  as: "cidade", 
+  foreignKey: "cidade_id", 
+  onDelete: "NO ACTION", 
+  onUpdate: "NO ACTION"
+})
+
+jogador.belongsTo(personagem, { 
+  as: "personagem", 
+  foreignKey: "personagem_id", 
+  onDelete: "NO ACTION", 
+  onUpdate: "NO ACTION"
+})
 
 
 module.exports = jogador
