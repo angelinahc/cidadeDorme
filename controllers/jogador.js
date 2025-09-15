@@ -1,6 +1,5 @@
-const { combineTableNames } = require('sequelize/lib/utils');
+// const { combineTableNames } = require('sequelize/lib/utils');
 const jogador = require('../models/jogador.js');
-const personagem = require('../models/personagem.js');
 
 module.exports = {
 
